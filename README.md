@@ -33,11 +33,11 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 
-math.html
+    math.html
 
-<html>
-<head>
-<h1 align=	"center"> V Rishon Anand (24900460)</h1>
+    <html>
+    <head>
+    <h1 align=	"center"> S DHANUS KARTHI (24005701)</h1>
     <title>Area of Rectangle</title>
     <style>
         body {
@@ -66,8 +66,8 @@ math.html
             margin-bottom: 6px;
         }
     </style>
-</head>
-<body>
+    </head>
+    <body>
     <div class="edge">
         <div class="box">
             <h1>Area of a Rectangle</h1>
@@ -85,13 +85,13 @@ math.html
                 </div>
         </div>
     </div>
-</body>
-</html>
+    </body>
+    </html>
 
- views.py
+    views.py
 
- from django.shortcuts import render
-def powerlamp(request): 
+    from django.shortcuts import render
+    def powerlamp(request): 
     context={} 
     context['power']="0" 
     context['i']="0" 
@@ -108,19 +108,18 @@ def powerlamp(request):
         context['i']=i
         context['r']=r 
         print('Power=',power) 
-    return render(request,'myapp/math.html',context)
+         return render(request,'myapp/math.html',context)
 
     urls.py
 
     from django.contrib import admin 
-from django.urls import path 
-from myapp import views 
-urlpatterns = [ 
+    from django.urls import path 
+    from myapp import views 
+    urlpatterns = [ 
     path('admin/', admin.site.urls), 
     path('powerlamp/',views.powerlamp,name="powerlamp"),
     path('',views.powerlamp,name="powerlamproot")
-]
-
+    ]
 ## SERVER SIDE PROCESSING:
 
 ![alt text](<Screenshot 2024-11-29 141457-1.png>)
